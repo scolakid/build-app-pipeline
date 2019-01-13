@@ -7,7 +7,9 @@ pipeline{
     
     stages {
         stage ('Checkout'){
-            git branch: 'exampleBranch', url: 'https://github.com/example-org/example-repo.git'
+            steps{
+                git branch: 'exampleBranch', url: 'https://github.com/example-org/example-repo.git'
+            }
         }
         stage("foo"){
             steps {
