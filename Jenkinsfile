@@ -1,10 +1,6 @@
 pipeline{
-    agent any
-    options {
-        // Only keep the 10 most recent builds
-        buildDiscarder(logRotator(numToKeepStr:'10'))
-    }
-    
+    agent{label 'windows'}
+        
     stages {
         stage("foo"){
             steps {
