@@ -6,11 +6,6 @@ pipeline{
     }
     
     stages {
-        stage ('Checkout'){
-            steps{
-                git branch: 'exampleBranch', url: 'https://github.com/example-org/example-repo.git'
-            }
-        }
         stage("foo"){
             steps {
                 echo "hello"
